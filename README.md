@@ -1,3 +1,11 @@
+# Processo para conversão
+
+- Seguido passo a passo do Next.js: https://nextjs.org/docs/app/guides/migrating/from-vite
+- Ajustado /app/page.tsx para chamar o mesmo que o index.js
+- Alterados locais com referência para "/src/..." para "@/..."
+
+# Readme original abaixo.
+
 # CoreUI Free React Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%React%204%20Admin%20Template%20&url=https://coreui.io&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
