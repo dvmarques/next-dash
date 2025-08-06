@@ -4,6 +4,10 @@
 - Ajustado /app/page.tsx para chamar o mesmo que o index.js
 - Alterados locais com referência para "/src/..." para "@/..."
 
+Repositório Core UI:
+https://github.com/coreui/coreui-free-react-admin-template
+release: v5.4.0
+
 # Readme original abaixo.
 
 # CoreUI Free React Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%React%204%20Admin%20Template%20&url=https://coreui.io&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
