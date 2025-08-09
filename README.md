@@ -4,10 +4,17 @@
 - Ajustado /app/page.tsx para chamar o mesmo que o index.js
 - Alterados locais com referência para "/src/..." para "@/..."
 - Criada versão "next" dos componentes, removendo o react-router (prefixo "NApp")
+- Ajustado react-redux para versão com Next.js
+
+TODO: Remover bibliotecas não usadas, como react-router.
 
 Repositório Core UI:
 https://github.com/coreui/coreui-free-react-admin-template
 release: v5.4.0
+
+Live preview:
+https://coreui.io/demos/react/5.5/free/?theme=light#/dashboard
+
 
 # Readme original abaixo.
 
