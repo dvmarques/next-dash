@@ -1,3 +1,4 @@
+import { MenuItem } from '@/components/NAppSidebarNav'
 import {
 	cilBell,
 	cilCalculator,
@@ -16,7 +17,7 @@ import CIcon from '@coreui/icons-react'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 import React from 'react'
 
-const menuDeNavegacao = [
+const menuDeNavegacao: MenuItem[] = [
 	{
 		component: CNavItem,
 		name: 'Dashboard',

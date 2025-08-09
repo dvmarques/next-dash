@@ -1,11 +1,22 @@
 import { CBadge, CNavLink, CSidebarNav } from '@coreui/react'
 import Link from 'next/link'
-import PropTypes from 'prop-types'
 import SimpleBar from 'simplebar-react'
 import 'simplebar-react/dist/simplebar.min.css'
 
-export const NAppSidebarNav = ({ items }) => {
-	const navLink = (name, icon, badge, indent = false) => {
+export interface MenuItem {
+	component: React.ElementType
+	name: string | React.ReactNode
+	href?: string
+	icon?: React.ReactNode
+	badge?: {
+		color: string
+		text: string
+	}
+	items?: MenuItem[]
+}
+
+export default function NAppSidebarNav({ items }: { items: MenuItem[] }) {
+	const navLink = (name: string | React.ReactNode, icon: React.ReactNode, badge?: { color: string; text: string }, indent: boolean = false) => {
 		return (
 			<>
 				{icon
@@ -25,12 +36,12 @@ export const NAppSidebarNav = ({ items }) => {
 		)
 	}
 
-	const navItem = (item, index, indent = false) => {
+	const navItem = (item: MenuItem, index: number, indent = false) => {
 		const { component, name, badge, icon, ...rest } = item
 		const Component = component
 		return (
 			<Component as="div" key={index}>
-				{rest.to || rest.href ? (
+				{rest.href ? (
 					<CNavLink
 						{...(rest.href && { as: Link })}
 						{...rest}
@@ -44,8 +55,8 @@ export const NAppSidebarNav = ({ items }) => {
 		)
 	}
 
-	const navGroup = (item, index) => {
-		const { component, name, icon, items, to, ...rest } = item
+	const navGroup = (item: MenuItem, index: number) => {
+		const { component, name, icon, items, ...rest } = item
 		const Component = component
 		return (
 			<Component compact as="div" key={index} toggler={navLink(name, icon)} {...rest}>
@@ -62,8 +73,4 @@ export const NAppSidebarNav = ({ items }) => {
 				items.map((item, index) => (item.items ? navGroup(item, index) : navItem(item, index)))}
 		</CSidebarNav>
 	)
-}
-
-NAppSidebarNav.propTypes = {
-	items: PropTypes.arrayOf(PropTypes.any).isRequired,
 }
