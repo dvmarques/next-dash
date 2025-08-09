@@ -3,6 +3,7 @@
 - Seguido passo a passo do Next.js: https://nextjs.org/docs/app/guides/migrating/from-vite
 - Ajustado /app/page.tsx para chamar o mesmo que o index.js
 - Alterados locais com referência para "/src/..." para "@/..."
+- Criada versão "next" dos componentes, removendo o react-router (prefixo "NApp")
 
 Repositório Core UI:
 https://github.com/coreui/coreui-free-react-admin-template

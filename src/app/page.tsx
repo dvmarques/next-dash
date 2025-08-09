@@ -1,8 +1,8 @@
 "use client";
 
 import { Provider } from 'react-redux';
-import { AppBase } from '../App';
-import store from '../store';
+import { AppBase } from '../delme/App';
+import store from '../delme/store';
 
 export default function Home() {
 	return (
