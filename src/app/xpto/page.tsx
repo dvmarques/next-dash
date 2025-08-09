@@ -1,7 +1,7 @@
-import NAppContent from '@/components/NAppContent';
-import NAppFooter from '@/components/NAppFooter';
-import NAppHeader from '@/components/NAppHeader';
-import NAppSidebar from '@/components/NAppSidebar';
+import NAppContent from '@/components/molecules/NAppContent';
+import NAppFooter from '@/components/molecules/NAppFooter';
+import NAppHeader from '@/components/molecules/NAppHeader';
+import NAppSidebar from '@/components/molecules/NAppSidebar';
 import StoreProvider from '@/providers/StoreProvider';
 import '@/scss/style.scss';
 

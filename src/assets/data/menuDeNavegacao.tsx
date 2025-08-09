@@ -1,4 +1,4 @@
-import { MenuItem } from '@/components/NAppSidebarNav'
+import { MenuItem } from '@/components/molecules/NAppSidebarNav'
 import {
 	cilBell,
 	cilCalculator,
