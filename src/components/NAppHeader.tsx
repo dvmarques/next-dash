@@ -1,5 +1,6 @@
 "use client";
 
+import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 import {
 	cilBell,
 	cilContrast,
@@ -25,13 +26,15 @@ import {
 } from '@coreui/react';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
-import { AppHeaderDropdown } from '../delme/components/header/index';
 import NAppBreadcrumb from './NAppBreadcrumb';
 import NAppHeaderDropdown from './NAppHeaderDropdown';
 
 export default function NAppHeader() {
 	const headerRef = useRef<HTMLDivElement>(null)
 	const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
+
+	const dispatch = useAppDispatch();
+	const sidebarShow = useAppSelector((state) => state.sidebarVisible);
 
 	useEffect(() => {
 		document.addEventListener('scroll', () => {
@@ -44,6 +47,7 @@ export default function NAppHeader() {
 		<CHeader position="sticky" className="mb-4 p-0" ref={headerRef}>
 			<CContainer className="border-bottom px-4" fluid>
 				<CHeaderToggler
+					onClick={() => dispatch({ type: 'set', sidebarVisible: !sidebarShow })}
 					style={{ marginInlineStart: '-14px' }}
 				>
 					<CIcon icon={cilMenu} size="lg" />
