@@ -2,9 +2,9 @@ import NAppContent from '@/components/molecules/NAppContent';
 import NAppFooter from '@/components/molecules/NAppFooter';
 import NAppHeader from '@/components/molecules/NAppHeader';
 import NAppSidebar from '@/components/molecules/NAppSidebar';
-import AdmCard from '@/components/organisms/AdmCard';
 import StoreProvider from '@/providers/StoreProvider';
 import '@/scss/style.scss';
+import NDashboard from './Dashboard';
 
 export default function HomeXpto() {
 	return (
@@ -15,10 +15,7 @@ export default function HomeXpto() {
 					<NAppHeader />
 					<div className="body flex-grow-1">
 						<NAppContent>
-							<AdmCard title="Admin Card">
-								<p>This is the body content of the admin card.</p>
-								<p>This is the body content of the admin card.</p>
-							</AdmCard>
+							<NDashboard />
 						</NAppContent>
 					</div>
 					<NAppFooter />
