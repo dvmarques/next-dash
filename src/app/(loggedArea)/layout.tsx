@@ -4,9 +4,12 @@ import NAppHeader from '@/components/molecules/NAppHeader';
 import NAppSidebar from '@/components/molecules/NAppSidebar';
 import StoreProvider from '@/providers/StoreProvider';
 import '@/scss/style.scss';
-import NDashboard from './Dashboard';
 
-export default function HomeXpto() {
+interface LoggedAreaLayoutProps {
+	children: React.ReactNode;
+}
+
+export default function LoggedAreaLayout({ children }: LoggedAreaLayoutProps) {
 	return (
 		<StoreProvider>
 			<div>
@@ -15,7 +18,7 @@ export default function HomeXpto() {
 					<NAppHeader />
 					<div className="body flex-grow-1">
 						<NAppContent>
-							<NDashboard />
+							{children}
 						</NAppContent>
 					</div>
 					<NAppFooter />
