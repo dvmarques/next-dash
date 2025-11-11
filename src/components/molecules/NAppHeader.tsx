@@ -10,7 +10,6 @@ import {
 	cilMoon,
 	cilSun,
 } from '@coreui/icons';
-import CIcon from '@coreui/icons-react';
 import {
 	CContainer,
 	CDropdown,
@@ -26,6 +25,7 @@ import {
 } from '@coreui/react';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
+import { NCIcon } from '../atoms/NCAtoms';
 import NAppBreadcrumb from './NAppBreadcrumb';
 import NAppHeaderDropdown from './NAppHeaderDropdown';
 
@@ -50,7 +50,7 @@ export default function NAppHeader() {
 					onClick={() => dispatch({ type: 'set', sidebarVisible: !sidebarShow })}
 					style={{ marginInlineStart: '-14px' }}
 				>
-					<CIcon icon={cilMenu} size="lg" />
+					<NCIcon icon={cilMenu} size="lg" />
 				</CHeaderToggler>
 				<CHeaderNav className="d-none d-md-flex">
 					<CNavItem>
@@ -68,17 +68,17 @@ export default function NAppHeader() {
 				<CHeaderNav className="ms-auto">
 					<CNavItem>
 						<CNavLink href="#">
-							<CIcon icon={cilBell} size="lg" />
+							<NCIcon icon={cilBell} size="lg" />
 						</CNavLink>
 					</CNavItem>
 					<CNavItem>
 						<CNavLink href="#">
-							<CIcon icon={cilList} size="lg" />
+							<NCIcon icon={cilList} size="lg" />
 						</CNavLink>
 					</CNavItem>
 					<CNavItem>
 						<CNavLink href="#">
-							<CIcon icon={cilEnvelopeOpen} size="lg" />
+							<NCIcon icon={cilEnvelopeOpen} size="lg" />
 						</CNavLink>
 					</CNavItem>
 				</CHeaderNav>
@@ -89,11 +89,11 @@ export default function NAppHeader() {
 					<CDropdown variant="nav-item" placement="bottom-end">
 						<CDropdownToggle caret={false}>
 							{colorMode === 'dark' ? (
-								<CIcon icon={cilMoon} size="lg" />
+								<NCIcon icon={cilMoon} size="lg" />
 							) : colorMode === 'auto' ? (
-								<CIcon icon={cilContrast} size="lg" />
+								<NCIcon icon={cilContrast} size="lg" />
 							) : (
-								<CIcon icon={cilSun} size="lg" />
+								<NCIcon icon={cilSun} size="lg" />
 							)}
 						</CDropdownToggle>
 						<CDropdownMenu>
@@ -104,7 +104,7 @@ export default function NAppHeader() {
 								type="button"
 								onClick={() => setColorMode('light')}
 							>
-								<CIcon className="me-2" icon={cilSun} size="lg" /> Light
+								<NCIcon className="me-2" icon={cilSun} size="lg" /> Light
 							</CDropdownItem>
 							<CDropdownItem
 								active={colorMode === 'dark'}
@@ -113,7 +113,7 @@ export default function NAppHeader() {
 								type="button"
 								onClick={() => setColorMode('dark')}
 							>
-								<CIcon className="me-2" icon={cilMoon} size="lg" /> Dark
+								<NCIcon className="me-2" icon={cilMoon} size="lg" /> Dark
 							</CDropdownItem>
 							<CDropdownItem
 								active={colorMode === 'auto'}
@@ -122,7 +122,7 @@ export default function NAppHeader() {
 								type="button"
 								onClick={() => setColorMode('auto')}
 							>
-								<CIcon className="me-2" icon={cilContrast} size="lg" /> Auto
+								<NCIcon className="me-2" icon={cilContrast} size="lg" /> Auto
 							</CDropdownItem>
 						</CDropdownMenu>
 					</CDropdown>
