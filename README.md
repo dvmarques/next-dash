@@ -1,3 +1,23 @@
+# Processo para conversão
+
+- Seguido passo a passo do Next.js: https://nextjs.org/docs/app/guides/migrating/from-vite
+- Ajustado /app/page.tsx para chamar o mesmo que o index.js
+- Alterados locais com referência para "/src/..." para "@/..."
+- Criada versão "next" dos componentes, removendo o react-router (prefixo "NApp")
+- Ajustado react-redux para versão com Next.js
+
+TODO: Remover bibliotecas não usadas, como react-router.
+
+Repositório Core UI:
+https://github.com/coreui/coreui-free-react-admin-template
+release: v5.4.0
+
+Live preview:
+https://coreui.io/demos/react/5.5/free/?theme=light#/dashboard
+
+
+# Readme original abaixo.
+
 # CoreUI Free React Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%React%204%20Admin%20Template%20&url=https://coreui.io&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
