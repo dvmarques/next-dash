@@ -3,7 +3,6 @@ import NAppFooter from '@/components/molecules/NAppFooter';
 import NAppHeader from '@/components/molecules/NAppHeader';
 import NAppSidebar from '@/components/molecules/NAppSidebar';
 import StoreProvider from '@/providers/StoreProvider';
-import '@/scss/style.scss';
 
 interface LoggedAreaLayoutProps {
 	children: React.ReactNode;
